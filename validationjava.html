@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>form</title>
+<style> 
+label{ 
+font-size:20px; 
+}  
+</style>
+</head>
+<body bgcolor="#FFD700">
+<script>
+function validateform()
+{
+var x=document.myform.fname.value;
+var a=document.myform.username.value;
+var y=document.myform.password.value;
+var z=document.myform.cpassword.value;
+var b=document.myform.email.value;
+var atposition=b.indexOf("@");
+var dotposition=b.lastIndexOf(".")
+if(x==null||x=="")
+{
+alert("The first name should not be blank");
+}
+if(isNaN(x))
+{
+alert("First name verified");
+}
+else
+{
+alert("Please enter valid name");
+}
+if(a==null||a=="")
+{
+alert("Username should not be blank");
+}
+if(y.length<6)
+{
+alert("Password must have atleast 6 characters");
+}
+ if(y!=z)
+{
+alert("Password doesn't match");
+}
+if(myform.gender[0].checked==false && myform.gender[1].checked==false)
+{
+alert("Please choose your gender");
+}
+if(atposition<1 || dotposition<atposition+2 || dotposition+2>=b.length)
+{
+alert("Please enter a valid email");
+}
+if(myform.dob.value==false)
+{
+alert("Date not selected");
+}
+if(myform.malayalam.checked==false && myform.english.checked==false && myform.hindi.checked==false && myform.tamil.checked==false)
+{
+alert("Please enter a language");
+}
+}
+</script>
+<table>
+<h1><center><u>REGISTRATION FORM</u></center></h1>
+<form name="myform" onsubmit=validateform()><b>
+<h3 style="color:black;padding:5px;font-size:20px;"><u>USER INFO</u></h3>
+<label for="fname">First Name&emsp;&emsp;&emsp;:</label><input type="text"  name="fname"><label for="lname">&emsp;Last Name : </label><input type="text" id="lname" name="lname" value=" "><br><br>
+<label for="username">Username&nbsp;&nbsp;&emsp;&emsp;&emsp;:</label><input type="text" name="username"><br><br>
+<label for="password">Password&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;:</label><input type="password" name="password"><br>
+<label for="cpassword">Confirm password:</label><input type="password" name="cpassword"><br><br>
+<label for="dob">DOB&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;:</label><input type="date" name="dob"><br><br>
+<label for= "email">Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;:</label><input type="text" name="email"><br>
+<h4 style="color:black;padding:5px;font-size:20px;"><u>Gender</u></h4>
+<input type="radio" name="gender" value="female"><label for="female">Female</label>
+<input type="radio" name="gender" value="male"><label for="male">Male</label><br><br>
+<h3><u>Languages you can speak</u></h3>
+<input type="checkbox" name="malayalam" value="malayalam" id="malayalam"><label for="malayalam">Malayalam</label><br>
+<input type="checkbox" name="english" value="english" id="english"><label for="english">English</label><br>
+<input type="checkbox" name="hindi" value="hindi" id="hindi"><label for="hindi">Hindi</label><br>
+<input type="checkbox" name="tamil" value="tamil" id="tamil"><label for="tamil">Tamil</label><br><br>
+<center><h3><input type="submit" value="Register"></h3></center><center><h3><input type="reset" value="reset"></h3></center>
+</form></table></body>
+</html>

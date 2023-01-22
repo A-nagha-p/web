@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>form</title>
+<link rel = "stylesheet" type = "text/css" href = "regexternal.css">
+<style> 
+label{ 
+font-size:20px; 
+} 
+form{ 
+color:4B0082; 
+} 
+</style>
+</head>
+<body>
+<h1><center><U>STUDENT FORM</U></h1>
+<form><b>
+<label for="fname">First name:</label>
+<input type="text" id="fname">
+<label for="lname">Last name:</label>
+<input type="text" id="fname"><br><br>
+<label for="pwd">Enter email id:</label><br>
+<input type="email" id="email" name="emil"><br>
+<label for="pwd">password:</label><br>
+<input type="password" id="pwd" name="pwd"><br><BR>
+<label for="fname">Address:</label><br>
+<textarea name="message" rows="8" cols="30"></textarea><br><br>
+<label for="fname">College name:</label>
+<input type="text" id="collegename"><br><br>
+<label for="pwd">Birthday:</label><br>
+<input type="date" id="dob" name="dob"><br>
+<h4 style="color:4B0082;padding:5px;font-size:20px;">Gender:</h4>
+<input type="radio" id="html" name="gender" value="male">
+<label for="html">Male</label><br>
+<input type="radio" id="html" name="gender" value="female">
+<label for="html">Female</label><br><br>
+<label for="fname">City:</label>
+<input type="text" id="city"><br><br>
+<label for="state">Choose your state:</label>
+<select id="state" name="state" size="4" multiple>
+<option value="kerala">kerala</option>
+<option value="punjab">punjap</option>
+<option value="goa">goa</option>
+<option value="bihar">bihar</option>
+<option value="Manipur">Manipur</option>
+</select><br><br>
+<label for="Qualifications">Qualification:</label>
+<input list="qualifications">
+<datalist id="qualifications">
+<option value="10th">10th</option>
+<option value="12th">12th</option>
+<option value="degree">degree</option>
+<option value="pg">pg</option>
+</datalist><br>
+<h4 style="color:4B0082;padding:5px;font-size:20px;">Hobbies:</h4>
+<input type="checkbox" id="hobbies" name="hobbies" value="Drawing">
+<label for="hobbies">drawing</label><br>
+<input type="checkbox" id="hobbies" name="hobbies" value="reading">
+<label for="hobbies">reading</label><br>
+<input type="checkbox" id="hobbies" name="hobbies" value="dance">
+<label for="hobbies">dance</label><br>
+<center><button type="button" onclick="alert('SAVED!!!')">Save</button><input type="submit" value="submit"></center>
+</form>
+</body>
+</html>
